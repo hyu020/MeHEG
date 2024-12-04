@@ -12,7 +12,8 @@ mydeconv[,colnames(coef6s7)[i]] <- colSums(mydata2, na.rm = TRUE)
 row.names(mydeconv) <- colnames(mydata)
 mydeconv$MeHEG.g6s7 <- rowSds(as.matrix(mydeconv),na.rm = TRUE)
 mydeconv$MeHEG.g6s7m <- mydeconv$MeHEG.g6s7/rowMeans(as.matrix(mydeconv[,-ncol(mydeconv)]),na.rm = TRUE)
-mydeconvolution <- mydeconv[,"MeHEG.g6s7m"]
+mydeconvolution <- mydeconv[,"MeHEG.g6s7m",drop=FALSE]
+names(mydeconvolution) <- "MeHEG.score"
 return(mydeconvolution)
 }#over
 
