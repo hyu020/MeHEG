@@ -15,4 +15,4 @@ head(data.shen2021) #preparing the user-defined dataset as the sample dataset sh
 
 MeHEG.scores <- calMeHEG(data.shen2021) #calculate the MeHEG scores with the 'calMeHEG' function by using the dataframe of methylation array profile
 
-MeHEG.scores
+MeHEG.scores #output of MeHEG scores
